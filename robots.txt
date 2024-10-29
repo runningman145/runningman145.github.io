@@ -1,0 +1,66 @@
+# robots.txt Template
+# Updated: 2024
+# Website: thinkglobalactlocal.io
+# Global settings for all robots
+User-agent: *
+# Allow all robots to access the entire site
+Allow: /
+
+# Disallow access to specific folders
+Disallow: /private/
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /tmp/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Disallow specific file types
+Disallow: /*.php$
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.conf$
+Disallow: /*.env$
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.yml$
+Disallow: /*.ini$
+
+# Prevent access to specific pages
+Disallow: /login
+Disallow: /signup
+Disallow: /cart
+Disallow: /checkout
+Disallow: /thank-you
+Disallow: /order-confirmation
+Disallow: /my-account
+
+# Crawl-delay directive (in seconds) - use carefully
+# Crawl-delay: 10
+
+# Specific rules for Google bot
+User-agent: Googlebot
+Allow: /public/
+Allow: /products/
+Allow: /blog/
+Disallow: /products/discontinued/
+
+# Specific rules for Bing bot
+User-agent: Bingbot
+Allow: /public/
+Allow: /products/
+Allow: /blog/
+Disallow: /products/discontinued/
+
+# Block specific bots
+User-agent: BadBot
+Disallow: /
+
+# Sitemap locations
+Sitemap: https://example.com/sitemap.xml
+Sitemap: https://example.com/sitemap-products.xml
+Sitemap: https://example.com/sitemap-blog.xml
+
+# Host directive (optional - use only if needed)
+# Host: example.com

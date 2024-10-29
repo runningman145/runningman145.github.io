@@ -1,0 +1,127 @@
+/* Header Navigation Styles */
+.navbar {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styles */
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+img {
+    width: 45px;
+}
+
+/* Navigation Links Container */
+nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+}
+
+nav a:hover {
+    color: #2ecc71;
+}
+
+/* Underline effect on hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #2ecc71;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Button Styles */
+.btn-container button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-learn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #2ecc71;
+}
+
+.btn-learn:hover {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+.btn-join {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.btn-join:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav a::after {
+        bottom: -2px;
+    }
+}
+
+/* Optional: Add smooth scrolling to the whole page */
+html {
+    scroll-behavior: smooth;
+}
