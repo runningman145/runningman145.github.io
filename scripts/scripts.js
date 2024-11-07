@@ -7,21 +7,8 @@ const joinButton = document.getElementById('btn-join');
 
 
 // add functionality to the buttons
-homePage => {
-    learnButton.addEventListener('click', function() {
-        window.location.href = 'learn.html';
-    });
-    donateButton.addEventListener('click', function() {
-        window.location.href = 'donate.html';
-    });
-    getInvolvedButton.addEventListener('click', function() {
-        window.location.href = 'get-involved.html';
-    });
-    learnMoreButton.addEventListener('click', function() {
-        window.location.href = 'learn-more.html';
-    });
-}
-
-learnButton.addEventListener('click', homePage);
-donateButton.addEventListener('click', homePage);
-
+// adding event listeners to the button when clicked, listening for clicks
+learnButton.addEventListener('click', () => {
+    // display a message to user about the project
+    
+})
